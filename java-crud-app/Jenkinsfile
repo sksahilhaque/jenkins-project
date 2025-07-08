@@ -11,8 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                   sh 'pwd'
-                  sh 'java-crud-app/ls -l'
-                  sh './build.sh'
+                  sh 'ls -l java-crud-app'
+                  sh 'cat build.sh || echo "build.sh missing"'
             }
         }
 
