@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class student {
+public class Student {
     static Scanner sc = new Scanner(System.in);
     static Map<Integer, String> students = new HashMap<>();
 
