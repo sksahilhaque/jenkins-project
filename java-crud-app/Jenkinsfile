@@ -10,7 +10,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh './build.sh'
+                  sh 'pwd'
+                  sh 'ls -l'
+                  sh './build.sh'
             }
         }
 
