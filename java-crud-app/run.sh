@@ -1,2 +1,2 @@
 #!/bin/bash
-java -cp out student < input.txt
+java -cp out Student < input.txt

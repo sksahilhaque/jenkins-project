@@ -2,23 +2,17 @@ pipeline {
     agent any
 
     stages {
-    //     stage('Clone') {
-    //         steps {
-    //             git 'https://github.com/sksahilhaque/java-crud-app.git'
-    //         }
-    //     }
-
         stage('Build') {
             steps {
-                  sh 'pwd'
-                  sh 'ls -l'
-                  sh './build.sh'
+                sh 'chmod +x java-crud-app/build.sh'
+                sh 'java-crud-app/build.sh'
             }
         }
 
         stage('Run with Input') {
             steps {
-                sh 'java -cp out StudentManager < input.txt'
+                sh 'chmod +x java-crud-app/run.sh'
+                sh 'java-crud-app/run.sh < java-crud-app/input.txt'
             }
         }
 
