@@ -17,10 +17,10 @@ pipeline {
                 sh '''
                     cd java-crud-app
                     chmod +x run.sh
-                    ./run.sh < input.txt
-                '''
+                    ./run.sh < input.txt > output.txt
+                    '''
+                    archiveArtifacts artifacts: 'java-crud-app/output.txt', fingerprint: true
+                }
             }
-        }
-
     }
 }
