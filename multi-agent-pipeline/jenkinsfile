@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 // Checkout the code from the repository
-                sh 'node --version'
+                sh 'mvn --version'
             }
         }
     }
