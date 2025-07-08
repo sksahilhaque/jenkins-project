@@ -4,15 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'chmod +x java-crud-app/build.sh'
-                sh 'java-crud-app/build.sh'
+                sh '''
+                    cd java-crud-app
+                    chmod +x build.sh
+                    ./build.sh
+                '''
             }
         }
 
         stage('Run with Input') {
             steps {
-                sh 'chmod +x java-crud-app/run.sh'
-                sh 'java-crud-app/run.sh < java-crud-app/input.txt'
+                sh '''
+                    cd java-crud-app
+                    chmod +x run.sh
+                    ./run.sh < input.txt
+                '''
             }
         }
 
